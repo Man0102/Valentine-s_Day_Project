@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <script>
+            function nextPage(){
+                window.location.href = "yes.html";
+            }
+            function moveButton(){
+                const button = document.getElementById('No_Button');
+                const x = Math.random() * (window.innerWidth - button.offsetWidth) - 80;
+                const y = Math.random() * (window.innerHeight - button.offsetHeight) - 48;
+                button.style.left = `${x}px`;
+                button.style.top = `${y}px`;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="header_text">Do you wanna be my Valentine?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTJzanB1b3RrbTNwaDVmaTQ4cHdsbHUzeDF5MTA2Z2piZW40MDBmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K64TYvCquNClUtF0dK/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="Buttons">
+                <button class="btn" id="Yes_Button" onclick="nextPage()">Yes</button>
+                <button class="btn" id="No_Button" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+        </div>
+    </body>
+</html>
